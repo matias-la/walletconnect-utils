@@ -33,10 +33,6 @@ export function bufferToNumber(buf: Buffer): number {
   return buf.readUIntBE(0, buf.length);
 }
 
-export function bufferToBinary(buf: Buffer): string {
-  return arrayToBinary(bufferToArray(buf));
-}
-
 // -- Uint8Array ----------------------------------------- //
 
 export function arrayToBuffer(arr: Uint8Array): Buffer {
@@ -53,12 +49,6 @@ export function arrayToUtf8(arr: Uint8Array): string {
 
 export function arrayToNumber(arr: Uint8Array): number {
   return bufferToNumber(arrayToBuffer(arr));
-}
-
-export function arrayToBinary(arr: Uint8Array): string {
-  return Array.from(arr)
-    .map(numberToBinary)
-    .join("");
 }
 
 // -- Hex ------------------------------------------------ //
@@ -79,10 +69,6 @@ export function hexToNumber(hex: string): number {
   return arrayToNumber(hexToArray(hex));
 }
 
-export function hexToBinary(hex: string): string {
-  return arrayToBinary(hexToArray(hex));
-}
-
 // -- Utf8 ----------------------------------------------- //
 
 export function utf8ToBuffer(utf8: string): Buffer {
@@ -95,55 +81,6 @@ export function utf8ToArray(utf8: string): Uint8Array {
 
 export function utf8ToHex(utf8: string, prefixed = false): string {
   return bufferToHex(utf8ToBuffer(utf8), prefixed);
-}
-
-export function utf8ToBinary(utf8: string): string {
-  return arrayToBinary(utf8ToArray(utf8));
-}
-
-// -- Number ----------------------------------------------- //
-
-export function numberToBuffer(num: number): Buffer {
-  return binaryToBuffer(numberToBinary(num));
-}
-
-export function numberToArray(num: number): Uint8Array {
-  return binaryToArray(numberToBinary(num));
-}
-
-export function numberToHex(num: number, prefixed?: boolean): string {
-  return binaryToHex(numberToBinary(num), prefixed);
-}
-
-export function numberToUtf8(num: number): string {
-  return `${num}`;
-}
-
-export function numberToBinary(num: number): string {
-  const bin = (num >>> 0).toString(2);
-  return sanitizeBytes(bin);
-}
-
-// -- Binary ----------------------------------------------- //
-
-export function binaryToBuffer(bin: string): Buffer {
-  return arrayToBuffer(binaryToArray(bin));
-}
-
-export function binaryToArray(bin: string): Uint8Array {
-  return new Uint8Array(splitBytes(bin).map(x => parseInt(x, 2)));
-}
-
-export function binaryToHex(bin: string | string, prefixed?: boolean): string {
-  return arrayToHex(binaryToArray(bin), prefixed);
-}
-
-export function binaryToUtf8(bin: string): string {
-  return arrayToUtf8(binaryToArray(bin));
-}
-
-export function binaryToNumber(bin: string): number {
-  return arrayToNumber(binaryToArray(bin));
 }
 
 // -- Validators ----------------------------------------- //
@@ -240,21 +177,6 @@ export function calcByteLength(length: number, byteSize = 8): number {
     : length;
 }
 
-export function splitBytes(str: string, byteSize = 8): string[] {
-  const bytes = sanitizeBytes(str).match(new RegExp(`.{${byteSize}}`, "gi"));
-  return Array.from(bytes || []);
-}
-
-export function swapBytes(str: string): string {
-  return splitBytes(str)
-    .map(reverseString)
-    .join("");
-}
-
-export function swapHex(str: string): string {
-  return binaryToHex(swapBytes(hexToBinary(str)));
-}
-
 export function sanitizeBytes(
   str: string,
   byteSize = 8,
@@ -269,14 +191,6 @@ export function padLeft(
   padding = STRING_ZERO
 ): string {
   return padString(str, length, true, padding);
-}
-
-export function padRight(
-  str: string,
-  length: number,
-  padding = STRING_ZERO
-): string {
-  return padString(str, length, false, padding);
 }
 
 export function removeHexPrefix(hex: string): string {
@@ -304,13 +218,6 @@ export function removeHexLeadingZeros(hex: string): string {
 }
 
 // -- Private ----------------------------------------------- //
-
-function reverseString(str: string) {
-  return str
-    .split("")
-    .reverse()
-    .join("");
-}
 
 function padString(
   str: string,

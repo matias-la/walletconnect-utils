@@ -1,8 +1,3 @@
-export interface JsonRpcProviderMessage<T = any> {
-  type: string;
-  data: T;
-}
-
 export interface RequestArguments<T = any> {
   method: string;
   params?: T;

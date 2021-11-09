@@ -147,13 +147,6 @@ describe("EncUtils", () => {
     chai.expect(compare(result, expected)).to.be.true;
   });
 
-  it("hexToBinary", async () => {
-    const input = TEST_STRING_HEX;
-    const expected = TEST_STRING_BIN;
-    const result = encoding.hexToBinary(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
   // -- Utf8 ------------------------------------------------- //
 
   it("utf8ToBuffer", async () => {
@@ -177,92 +170,6 @@ describe("EncUtils", () => {
     chai.expect(compare(result, expected)).to.be.true;
     chai.expect(result.startsWith("0x")).to.be.false;
     chai.expect(result.length % 2).to.eql(0);
-  });
-
-  it("utf8ToBinary", async () => {
-    const input = TEST_STRING_UTF8;
-    const expected = TEST_STRING_BIN;
-    const result = encoding.utf8ToBinary(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
-  // -- Number ----------------------------------------------- //
-
-  it("numberToBuffer", async () => {
-    const input = TEST_NUMBER_NUM;
-    const expected = TEST_NUMBER_BUF;
-    const result = encoding.numberToBuffer(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
-  it("numberToArray", async () => {
-    const input = TEST_NUMBER_NUM;
-    const expected = TEST_NUMBER_ARR;
-    const result = encoding.numberToArray(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
-  it("numberToUtf8", async () => {
-    const input = TEST_NUMBER_NUM;
-    const expected = TEST_NUMBER_UTF8;
-    const result = encoding.numberToUtf8(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
-  it("numberToHex", async () => {
-    const input = TEST_NUMBER_NUM;
-    const expected = TEST_NUMBER_HEX;
-    const result = encoding.numberToHex(input);
-    chai.expect(compare(result, expected)).to.be.true;
-    chai.expect(result.startsWith("0x")).to.be.false;
-    chai.expect(result.length % 2).to.eql(0);
-  });
-
-  it("numberToBinary", async () => {
-    const input = TEST_NUMBER_NUM;
-    const expected = TEST_NUMBER_BIN;
-    const result = encoding.numberToBinary(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
-  // -- Binary ----------------------------------------------- //
-
-  it("binaryToBuffer", async () => {
-    const input = TEST_STRING_BIN;
-    const expected = TEST_STRING_BUF;
-    const result = encoding.binaryToBuffer(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
-  it("binaryToArray", async () => {
-    const input = TEST_STRING_BIN;
-    const expected = TEST_STRING_ARR;
-    const result = encoding.binaryToArray(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
-  it("binaryToHex", async () => {
-    const input = TEST_STRING_BIN;
-    const expected = TEST_STRING_HEX;
-    const result = encoding.binaryToHex(input);
-    chai.expect(compare(result, expected)).to.be.true;
-    chai.expect(result.startsWith("0x")).to.be.false;
-    chai.expect(result.length % 2).to.eql(0);
-  });
-
-  it("binaryToUtf8", async () => {
-    const input = TEST_STRING_BIN;
-    const expected = TEST_STRING_UTF8;
-    const result = encoding.binaryToUtf8(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
-  it("binaryToNumber", async () => {
-    const input = TEST_NUMBER_BIN;
-    const expected = TEST_NUMBER_NUM;
-    const result = encoding.binaryToNumber(input);
-    chai.expect(compare(result, expected)).to.be.true;
-    chai.expect(result).to.eql(parseInt(input, 2));
   });
 
   // -- Validators ----------------------------------------- //
@@ -360,44 +267,16 @@ describe("EncUtils", () => {
     chai.expect(encoding.calcByteLength(17)).to.eql(24);
   });
 
-  it("splitBytes", async () => {
-    chai
-      .expect(encoding.splitBytes(TEST_INVALID_BIN))
-      .to.eql([TEST_SIMPLE_BIN]);
-    chai.expect(encoding.splitBytes(TEST_SIMPLE_BIN)).to.eql([TEST_SIMPLE_BIN]);
-    chai
-      .expect(encoding.splitBytes(TEST_SIMPLE_BIN + TEST_SIMPLE_BIN))
-      .to.eql([TEST_SIMPLE_BIN, TEST_SIMPLE_BIN]);
-  });
-
   it("sanitizeBytes", async () => {
     chai.expect(encoding.sanitizeBytes("001")).to.eql("00000001");
     chai.expect(encoding.sanitizeBytes("001", 2)).to.eql("0001");
     chai.expect(encoding.sanitizeBytes("1", 2, "1")).to.eql("11");
   });
 
-  it("swapBytes", async () => {
-    chai.expect(encoding.swapBytes(TEST_SIMPLE_BIN)).to.eql(TEST_SWAPPED_BIN);
-  });
-  it("swapHex", async () => {
-    chai.expect(encoding.swapHex(TEST_STRING_HEX)).to.eql(TEST_SWAPPED_HEX);
-  });
-
   it("padLeft", async () => {
     const input = TEST_STRING_HEX;
     const expected = TEST_EMPTY_HEX + TEST_STRING_HEX;
     const result = encoding.padLeft(input, expected.length);
-    chai.expect(compare(result, expected)).to.be.true;
-    chai.expect(result.length).to.eql(expected.length);
-    chai
-      .expect(result.replace(input, ""))
-      .to.eql("0".repeat(expected.length - input.length));
-  });
-
-  it("padRight", async () => {
-    const input = TEST_STRING_HEX;
-    const expected = TEST_STRING_HEX + TEST_EMPTY_HEX;
-    const result = encoding.padRight(input, expected.length);
     chai.expect(compare(result, expected)).to.be.true;
     chai.expect(result.length).to.eql(expected.length);
     chai

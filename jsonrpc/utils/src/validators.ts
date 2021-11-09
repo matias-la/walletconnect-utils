@@ -4,8 +4,6 @@ import {
   JsonRpcRequest,
   JsonRpcResponse,
   JsonRpcResult,
-  JsonRpcValidation,
-  JsonRpcValidationInvalid,
 } from "./types";
 
 export function isJsonRpcPayload(payload: any): payload is JsonRpcPayload {
@@ -26,10 +24,4 @@ export function isJsonRpcResult<T = any>(payload: JsonRpcPayload): payload is Js
 
 export function isJsonRpcError(payload: JsonRpcPayload): payload is JsonRpcError {
   return "error" in payload;
-}
-
-export function isJsonRpcValidationInvalid(
-  validation: JsonRpcValidation,
-): validation is JsonRpcValidationInvalid {
-  return "error" in validation && validation.valid === false;
 }
