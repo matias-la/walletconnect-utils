@@ -97,12 +97,6 @@ export function utf8ToHex(utf8: string, prefixed = false): string {
   return bufferToHex(utf8ToBuffer(utf8), prefixed);
 }
 
-export function utf8ToNumber(utf8: string): number {
-  const num = parseInt(utf8, 10);
-  assert(isDefined(num), "Number can only safely store up to 53 bits");
-  return num;
-}
-
 export function utf8ToBinary(utf8: string): string {
   return arrayToBinary(utf8ToArray(utf8));
 }
@@ -310,20 +304,6 @@ export function removeHexLeadingZeros(hex: string): string {
 }
 
 // -- Private ----------------------------------------------- //
-
-function isUndefined(value: any): boolean {
-  return typeof value === "undefined";
-}
-
-function isDefined(value: any): boolean {
-  return !isUndefined(value);
-}
-
-function assert(assertion: boolean, errorMessage: string) {
-  if (!assertion) {
-    throw new Error(errorMessage);
-  }
-}
 
 function reverseString(str: string) {
   return str

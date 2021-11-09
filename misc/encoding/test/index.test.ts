@@ -179,13 +179,6 @@ describe("EncUtils", () => {
     chai.expect(result.length % 2).to.eql(0);
   });
 
-  it("utf8ToNumber", async () => {
-    const input = TEST_NUMBER_UTF8;
-    const expected = TEST_NUMBER_NUM;
-    const result = encoding.utf8ToNumber(input);
-    chai.expect(compare(result, expected)).to.be.true;
-  });
-
   it("utf8ToBinary", async () => {
     const input = TEST_STRING_UTF8;
     const expected = TEST_STRING_BIN;
