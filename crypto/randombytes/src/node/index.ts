@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { bufferToArray } from "@walletconnect/encoding";
+import { bufferToArray } from "@exodus/walletconnect-encoding";
 
 export function randomBytes(length: number): Uint8Array {
   const buf = crypto.randomBytes(length);

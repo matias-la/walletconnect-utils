@@ -2,7 +2,7 @@ import "mocha";
 import * as chai from "chai";
 
 import { Crypto } from "@peculiar/webcrypto";
-import { concatArrays, hexToArray, utf8ToArray } from "@walletconnect/encoding";
+import { concatArrays, hexToArray, utf8ToArray } from "@exodus/walletconnect-encoding";
 
 import * as isoCrypto from "../src/node";
 import * as nodeCrypto from "../src/lib/node";

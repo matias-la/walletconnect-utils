@@ -15,7 +15,7 @@ import {
   TEST_FIXED_IV,
   TEST_HMAC_SIG,
 } from "./common";
-import { concatArrays, hexToArray, utf8ToArray } from "@walletconnect/encoding";
+import { concatArrays, hexToArray, utf8ToArray } from "@exodus/walletconnect-encoding";
 
 global.crypto = new Crypto();
 

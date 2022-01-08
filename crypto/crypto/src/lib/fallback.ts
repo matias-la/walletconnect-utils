@@ -1,5 +1,5 @@
 import aesJs from "aes-js";
-import { hexToArray } from "@walletconnect/encoding";
+import { hexToArray } from "@exodus/walletconnect-encoding";
 import * as hash from "hash.js";
 
 import { HEX_ENC, SHA256_NODE_ALGO, SHA512_NODE_ALGO } from "../constants";

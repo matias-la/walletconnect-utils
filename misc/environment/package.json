@@ -1,7 +1,7 @@
 {
-  "name": "@walletconnect/environment",
+  "name": "@exodus/walletconnect-environment",
   "description": "Environment utilities",
-  "version": "1.0.0",
+  "version": "1.0.0-exodus.0",
   "author": "WalletConnect <walletconnect.org>",
   "license": "MIT",
   "keywords": [

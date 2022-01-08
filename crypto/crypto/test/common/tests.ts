@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import * as encoding from "@walletconnect/encoding";
+import * as encoding from "@exodus/walletconnect-encoding";
 
 import * as isoCrypto from "../../src/node";
 import { TEST_MESSAGE_STR } from "./constants";

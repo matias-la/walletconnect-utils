@@ -1,4 +1,4 @@
-export * from "@walletconnect/randombytes";
+export * from "@exodus/walletconnect-randombytes";
 
 export * from "./aes";
 export * from "./hmac";

@@ -1,7 +1,7 @@
 import "mocha";
 import * as chai from "chai";
 
-import { hexToArray, utf8ToArray } from "@walletconnect/encoding";
+import { hexToArray, utf8ToArray } from "@exodus/walletconnect-encoding";
 import * as isoCrypto from "../src/node";
 import { TEST_MESSAGE_STR, TEST_SHA256_HASH, TEST_SHA512_HASH } from "./common";
 

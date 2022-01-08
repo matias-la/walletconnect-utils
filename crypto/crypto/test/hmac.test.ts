@@ -1,7 +1,7 @@
 import "mocha";
 import * as chai from "chai";
 
-import { concatArrays, hexToArray, utf8ToArray } from "@walletconnect/encoding";
+import { concatArrays, hexToArray, utf8ToArray } from "@exodus/walletconnect-encoding";
 import {
   testHmacSign,
   testHmacVerify,
