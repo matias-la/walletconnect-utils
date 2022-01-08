@@ -40,9 +40,6 @@
     "test": "env TS_NODE_PROJECT=\"tsconfig.cjs.json\" mocha --exit -r ts-node/register ./test/**/*.test.ts",
     "lint": "eslint -c '../../.eslintrc' --fix './src/**/*.ts'"
   },
-  "dependencies": {
-    "keyvaluestorage-interface": "^1.0.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
