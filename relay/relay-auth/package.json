@@ -13,6 +13,7 @@
     "ed25519"
   ],
   "files": [
+    "!dist/*.tsbuildinfo",
     "dist"
   ],
   "main": "dist/esm/index.js",

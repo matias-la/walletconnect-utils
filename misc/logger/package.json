@@ -13,6 +13,7 @@
     "url": "https://github.com/WalletConnect/walletconnect-utils/issues"
   },
   "files": [
+    "!dist/*.tsbuildinfo",
     "dist"
   ],
   "keywords": [

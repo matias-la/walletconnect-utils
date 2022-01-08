@@ -12,6 +12,7 @@
     "utils"
   ],
   "files": [
+    "!dist/*.tsbuildinfo",
     "dist"
   ],
   "main": "dist/esm/index.js",
