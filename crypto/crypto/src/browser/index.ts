@@ -1,8 +1,8 @@
 export * from "@exodus/walletconnect-randombytes";
 
-export * from "./aes";
-export * from "./hmac";
-export * from "./sha2";
+export * from "./aes.js";
+export * from "./hmac.js";
+export * from "./sha2.js";
 
-export * from "../helpers";
-export * from "../constants";
+export * from "../helpers/index.js";
+export * from "../constants/index.js";

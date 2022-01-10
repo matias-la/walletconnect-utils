@@ -1,4 +1,4 @@
-import { LENGTH_1, LENGTH_32, LENGTH_16, LENGTH_256 } from "./length";
+import { LENGTH_1, LENGTH_32, LENGTH_16, LENGTH_256 } from "./length.js";
 
 export const AES_LENGTH = LENGTH_256;
 export const HMAC_LENGTH = LENGTH_256;

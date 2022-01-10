@@ -12,7 +12,7 @@ import {
   SHA256_BROWSER_ALGO,
   SHA512_BROWSER_ALGO,
   LENGTH_512,
-} from "../constants";
+} from "../constants/index.js";
 
 export function getAlgo(type: string): AesKeyAlgorithm | HmacImportParams {
   return type === AES_BROWSER_ALGO

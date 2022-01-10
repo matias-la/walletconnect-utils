@@ -1,2 +1,2 @@
-export * from "./jsonrpc";
-export * from "./misc";
+export * from "./jsonrpc.js";
+export * from "./misc.js";

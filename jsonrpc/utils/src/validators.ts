@@ -4,7 +4,7 @@ import {
   JsonRpcRequest,
   JsonRpcResponse,
   JsonRpcResult,
-} from "./types";
+} from "./types.js";
 
 export function isJsonRpcPayload(payload: any): payload is JsonRpcPayload {
   return "id" in payload && "jsonrpc" in payload && payload.jsonrpc === "2.0";

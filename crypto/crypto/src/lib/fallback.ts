@@ -2,8 +2,8 @@ import aesJs from "aes-js";
 import { hexToArray } from "@exodus/walletconnect-encoding";
 import * as hash from "hash.js";
 
-import { HEX_ENC, SHA256_NODE_ALGO, SHA512_NODE_ALGO } from "../constants";
-import { pkcs7 } from "../helpers";
+import { HEX_ENC, SHA256_NODE_ALGO, SHA512_NODE_ALGO } from "../constants/index.js";
+import { pkcs7 } from "../helpers/index.js";
 
 export function fallbackAesEncrypt(
   iv: Uint8Array,

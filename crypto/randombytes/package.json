@@ -18,7 +18,7 @@
   "react-native": "dist/esm/node/index.js",
   "browser": "dist/esm/browser/index.js",
   "types": "./dist/esm/node/index.d.ts",
-  "unpkg": "dist/umd/index.min.js",
+  "type": "module",
   "homepage": "https://github.com/walletconnect/walletconnect-utils",
   "repository": {
     "type": "git",

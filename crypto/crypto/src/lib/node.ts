@@ -7,7 +7,7 @@ import {
   SHA512_NODE_ALGO,
   SHA256_NODE_ALGO,
   RIPEMD160_NODE_ALGO,
-} from "../constants";
+} from "../constants/index.js";
 
 export function nodeAesEncrypt(
   iv: Uint8Array,
