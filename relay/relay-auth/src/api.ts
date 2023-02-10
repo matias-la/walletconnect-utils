@@ -1,5 +1,4 @@
-import * as ed25519 from "@stablelib/ed25519";
-import { randomBytes } from "@stablelib/random";
+import * as nacl from "tweetnacl";
 import { fromMiliseconds } from "@walletconnect/time";
 import {
   JWT_IRIDIUM_ALG,
@@ -16,16 +15,16 @@ import {
 } from "./utils";
 
 export function generateKeyPair(
-  seed: Uint8Array = randomBytes(KEY_PAIR_SEED_LENGTH)
-): ed25519.KeyPair {
-  return ed25519.generateKeyPairFromSeed(seed);
+  seed: Uint8Array = nacl.randomBytes(KEY_PAIR_SEED_LENGTH)
+): nacl.SignKeyPair {
+  return nacl.sign.keyPair.fromSeed(seed);
 }
 
 export async function signJWT(
   sub: string,
   aud: string,
   ttl: number,
-  keyPair: ed25519.KeyPair,
+  keyPair: nacl.SignKeyPair,
   iat: number = fromMiliseconds(Date.now())
 ) {
   const header = { alg: JWT_IRIDIUM_ALG, typ: JWT_IRIDIUM_TYP };
@@ -33,7 +32,7 @@ export async function signJWT(
   const exp = iat + ttl;
   const payload = { iss, sub, aud, iat, exp };
   const data = encodeData({ header, payload });
-  const signature = ed25519.sign(keyPair.secretKey, data);
+  const signature = nacl.sign.detached(data, keyPair.secretKey);
   return encodeJWT({ header, payload, signature });
 }
 
@@ -43,5 +42,5 @@ export async function verifyJWT(jwt: string) {
     throw new Error("JWT must use EdDSA algorithm");
   }
   const publicKey = decodeIss(payload.iss);
-  return ed25519.verify(publicKey, data, signature);
+  return nacl.sign.detached.verify(data, signature, publicKey);
 }
