@@ -17,6 +17,7 @@
     "bootstrap": "lerna bootstrap --hoist",
     "lint": "lerna run lint",
     "build": "lerna run build",
+    "pack": "lerna run pack",
     "test": "lerna run test",
     "check": "run-s lint build test",
     "reset": "run-s clean bootstrap check",

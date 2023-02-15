@@ -31,6 +31,7 @@
     "provider"
   ],
   "scripts": {
+    "pack": "npm pack",
     "clean": "rm -rf dist",
     "build:pre": "run-s clean",
     "build:cjs": "npx tsc -p tsconfig.cjs.json",

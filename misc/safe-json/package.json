@@ -28,6 +28,7 @@
     "url": "https://github.com/walletconnect/walletconnect-utils/issues"
   },
   "scripts": {
+    "pack": "npm pack",
     "clean": "rm -rf dist",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
