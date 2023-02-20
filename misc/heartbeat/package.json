@@ -38,8 +38,7 @@
     "lint": "eslint -c '../../.eslintrc' --fix './src/**/*.ts'"
   },
   "dependencies": {
-    "@exodus/walletconnect-events": "^1.0.1-exodus.0",
-    "@exodus/walletconnect-time": "^1.0.2-exodus.0"
+    "@exodus/walletconnect-events": "^1.0.1-exodus.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.15",

@@ -1,6 +1,5 @@
 import * as ed25519 from "@stablelib/ed25519";
 import { randomBytes } from "@stablelib/random";
-import { fromMiliseconds } from "@walletconnect/time";
 import {
   JWT_IRIDIUM_ALG,
   JWT_IRIDIUM_TYP,
@@ -26,7 +25,7 @@ export async function signJWT(
   aud: string,
   ttl: number,
   keyPair: ed25519.KeyPair,
-  iat: number = fromMiliseconds(Date.now())
+  iat: number = Math.floor(Date.now() / 1000) // seconds
 ) {
   const header = { alg: JWT_IRIDIUM_ALG, typ: JWT_IRIDIUM_TYP };
   const iss = encodeIss(keyPair.publicKey);

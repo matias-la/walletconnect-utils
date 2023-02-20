@@ -1,5 +1,4 @@
 import { EventEmitter } from "events";
-import { toMiliseconds } from "@walletconnect/time";
 
 import { IHeartBeat, HeartBeatOptions } from "./types";
 
@@ -49,7 +48,7 @@ export class HeartBeat extends IHeartBeat {
   // ---------- Private ----------------------------------------------- //
 
   private async initialize(): Promise<any> {
-    this.intervalRef = setInterval(() => this.pulse(), toMiliseconds(this.interval));
+    this.intervalRef = setInterval(() => this.pulse(), this.interval * 1000);
   }
 
   private pulse() {
