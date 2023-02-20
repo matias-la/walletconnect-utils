@@ -1,5 +1,5 @@
 import { EventEmitter } from "events";
-import { safeJsonParse, safeJsonStringify } from "@walletconnect/safe-json";
+import { safeJsonParse, safeJsonStringify } from "@exodus/walletconnect-safe-json";
 import {
   formatJsonRpcError,
   IJsonRpcConnection,
@@ -8,7 +8,7 @@ import {
   isWsUrl,
   isLocalhostUrl,
   parseConnectionError,
-} from "@walletconnect/jsonrpc-utils";
+} from "@exodus/walletconnect-jsonrpc-utils";
 
 // Source: https://nodejs.org/api/events.html#emittersetmaxlistenersn
 const EVENT_EMITTER_MAX_LISTENERS_DEFAULT = 10;

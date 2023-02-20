@@ -5,7 +5,7 @@ import {
   STANDARD_ERROR_MAP,
   DEFAULT_ERROR,
 } from "./constants";
-import { JsonRpcError, JsonRpcValidation } from "@walletconnect/jsonrpc-types";
+import { JsonRpcError, JsonRpcValidation } from "@exodus/walletconnect-jsonrpc-types";
 
 export function isServerErrorCode(code: number): boolean {
   return code <= SERVER_ERROR_CODE_RANGE[0] && code >= SERVER_ERROR_CODE_RANGE[1];

@@ -1,4 +1,4 @@
-import { JsonRpcRequest } from "@walletconnect/jsonrpc-types";
+import { JsonRpcRequest } from "@exodus/walletconnect-jsonrpc-types";
 
 import { checkParams, methodEndsWith } from "./misc";
 import { RelayJsonRpc } from "./types";

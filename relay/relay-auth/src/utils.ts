@@ -1,7 +1,7 @@
 import { concat } from "uint8arrays/concat";
 import { toString } from "uint8arrays/to-string";
 import { fromString } from "uint8arrays/from-string";
-import { safeJsonParse, safeJsonStringify } from "@walletconnect/safe-json";
+import { safeJsonParse, safeJsonStringify } from "@exodus/walletconnect-safe-json";
 
 import {
   DATA_ENCODING,
