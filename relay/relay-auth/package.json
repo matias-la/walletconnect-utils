@@ -1,7 +1,7 @@
 {
-  "name": "@walletconnect/relay-auth",
+  "name": "@exodus/walletconnect-relay-auth",
   "description": "Relay Client Authentication",
-  "version": "1.0.4",
+  "version": "1.0.4-exodus.0",
   "author": "WalletConnect, Inc. <walletconnect.com>",
   "license": "MIT",
   "keywords": [
@@ -63,8 +63,8 @@
   "dependencies": {
     "@stablelib/ed25519": "^1.0.2",
     "@stablelib/random": "^1.0.1",
-    "@walletconnect/safe-json": "^1.0.1",
-    "@walletconnect/time": "^1.0.2",
+    "@exodus/walletconnect-safe-json": "^1.0.1-exodus.0",
+    "@exodus/walletconnect-time": "^1.0.2-exodus.0",
     "uint8arrays": "^3.0.0"
   }
 }

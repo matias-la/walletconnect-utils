@@ -1,7 +1,7 @@
 {
-  "name": "@walletconnect/relay-api",
+  "name": "@exodus/walletconnect-relay-api",
   "description": "Relay JSON-RPC API",
-  "version": "1.0.7",
+  "version": "1.0.7-exodus.0",
   "author": "WalletConnect, Inc. <walletconnect.com>",
   "license": "MIT",
   "keywords": [
@@ -57,6 +57,6 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@walletconnect/jsonrpc-types": "^1.0.2"
+    "@exodus/walletconnect-jsonrpc-types": "^1.0.2-exodus.0"
   }
 }

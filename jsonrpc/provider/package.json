@@ -1,7 +1,7 @@
 {
-  "name": "@walletconnect/jsonrpc-provider",
+  "name": "@exodus/walletconnect-jsonrpc-provider",
   "description": "Provider for JSON-RPC",
-  "version": "1.0.6",
+  "version": "1.0.6-exodus.0",
   "author": "WalletConnect, Inc. <walletconnect.com>",
   "license": "MIT",
   "homepage": "https://github.com/WalletConnect/walletconnect-utils/",
@@ -43,8 +43,8 @@
     "lint": "eslint -c '../../.eslintrc' --fix './src/**/*.ts'"
   },
   "dependencies": {
-    "@walletconnect/jsonrpc-utils": "^1.0.4",
-    "@walletconnect/safe-json": "^1.0.1"
+    "@exodus/walletconnect-jsonrpc-utils": "^1.0.4-exodus.0",
+    "@exodus/walletconnect-safe-json": "^1.0.1-exodus.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -61,10 +61,10 @@
     "@types/node": "^14.14.7",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
-    "@walletconnect/jsonrpc-http-connection": "^1.0.4",
-    "@walletconnect/jsonrpc-ws-connection": "^1.0.5",
-    "@walletconnect/relay-auth": "^1.0.3",
-    "@walletconnect/utils": "^2.1.3",
+    "@exodus/walletconnect-jsonrpc-http-connection": "^1.0.4",
+    "@exodus/walletconnect-jsonrpc-ws-connection": "^1.0.5",
+    "@exodus/walletconnect-relay-auth": "^1.0.3",
+    "@exodus/walletconnect-utils": "^2.1.3",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "core-js": "^3.6.5",

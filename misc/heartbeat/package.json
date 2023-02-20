@@ -1,7 +1,7 @@
 {
-  "name": "@walletconnect/heartbeat",
+  "name": "@exodus/walletconnect-heartbeat",
   "description": "HeartBeat",
-  "version": "1.2.0",
+  "version": "1.2.0-exodus.0",
   "author": "WalletConnect, Inc. <walletconnect.com>",
   "license": "MIT",
   "keywords": [
@@ -38,8 +38,8 @@
     "lint": "eslint -c '../../.eslintrc' --fix './src/**/*.ts'"
   },
   "dependencies": {
-    "@walletconnect/events": "^1.0.1",
-    "@walletconnect/time": "^1.0.2"
+    "@exodus/walletconnect-events": "^1.0.1-exodus.0",
+    "@exodus/walletconnect-time": "^1.0.2-exodus.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.15",
