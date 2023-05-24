@@ -1,7 +1,7 @@
 import {
   getDocumentOrThrow,
   getLocationOrThrow,
-} from "@walletconnect/window-getters";
+} from "@exodus/walletconnect-window-getters";
 
 export interface IWebsiteMetadata {
   description: string;

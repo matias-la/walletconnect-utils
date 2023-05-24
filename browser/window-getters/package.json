@@ -1,7 +1,7 @@
 {
-  "name": "@walletconnect/window-getters",
+  "name": "@exodus/walletconnect-window-getters",
   "description": "Safe Window Getters",
-  "version": "1.0.1",
+  "version": "1.0.1-exodus.0",
   "author": "WalletConnect, Inc. <walletconnect.com>",
   "license": "MIT",
   "keywords": [
