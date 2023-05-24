@@ -1,7 +1,7 @@
 {
-  "name": "@walletconnect/window-metadata",
+  "name": "@exodus/walletconnect-window-metadata",
   "description": "Scrape Window Metadata",
-  "version": "1.0.1",
+  "version": "1.0.1-exodus.0",
   "author": "WalletConnect, Inc. <walletconnect.com>",
   "license": "MIT",
   "keywords": [
