@@ -45,9 +45,9 @@
     "prepublishOnly": "npm run test && npm run build"
   },
   "dependencies": {
+    "@exodus/walletconnect-jsonrpc-utils": "file:../utils",
     "@exodus/walletconnect-jsonrpc-ws-connection": "^1.0.11-exodus.0",
-    "@exodus/walletconnect-safe-json": "^1.0.2-exodus.0",
-    "@walletconnect/jsonrpc-utils": "^1.0.8",
+    "@exodus/walletconnect-jsonrpc-utils": "^1.0.8-exodus.0",
     "tslib": "1.14.1"
   },
   "devDependencies": {

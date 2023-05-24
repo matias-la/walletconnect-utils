@@ -7,7 +7,7 @@ import {
   JsonRpcPayload,
   isHttpUrl,
   parseConnectionError,
-} from "@walletconnect/jsonrpc-utils";
+} from "@exodus/walletconnect-jsonrpc-utils";
 
 const DEFAULT_HTTP_HEADERS = {
   Accept: "application/json",

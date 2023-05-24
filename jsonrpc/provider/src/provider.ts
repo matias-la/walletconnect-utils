@@ -10,7 +10,7 @@ import {
   formatJsonRpcRequest,
   isJsonRpcError,
   getBigIntRpcId,
-} from "@walletconnect/jsonrpc-utils";
+} from "@exodus/walletconnect-jsonrpc-utils";
 
 export class JsonRpcProvider extends IJsonRpcProvider {
   public events = new EventEmitter();
