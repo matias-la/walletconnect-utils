@@ -1,6 +1,6 @@
 import { EventEmitter } from "events";
 import fetch from "cross-fetch";
-import { safeJsonParse, safeJsonStringify } from "@walletconnect/safe-json";
+import { safeJsonParse, safeJsonStringify } from "@exodus/walletconnect-safe-json";
 import {
   formatJsonRpcError,
   IJsonRpcConnection,

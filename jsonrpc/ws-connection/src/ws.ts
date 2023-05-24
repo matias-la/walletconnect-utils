@@ -1,5 +1,5 @@
 import { EventEmitter } from "events";
-import { safeJsonParse, safeJsonStringify } from "@walletconnect/safe-json";
+import { safeJsonParse, safeJsonStringify } from "@exodus/walletconnect-safe-json";
 import {
   formatJsonRpcError,
   IJsonRpcConnection,

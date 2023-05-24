@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@walletconnect/jsonrpc-utils": "^1.0.6",
-    "@walletconnect/safe-json": "^1.0.1",
+    "@exodus/walletconnect-safe-json": "^1.0.2-exodus.0",
     "cross-fetch": "^3.1.4",
     "tslib": "1.14.1"
   },

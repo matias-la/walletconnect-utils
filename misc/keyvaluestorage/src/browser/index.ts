@@ -1,4 +1,4 @@
-import { safeJsonParse, safeJsonStringify } from "@walletconnect/safe-json";
+import { safeJsonParse, safeJsonStringify } from "@exodus/walletconnect-safe-json";
 import localStorage from "./lib/localStorage";
 
 import { IKeyValueStorage, parseEntry } from "../shared";

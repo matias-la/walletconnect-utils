@@ -63,7 +63,7 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@walletconnect/safe-json": "^1.0.1",
+    "@exodus/walletconnect-safe-json": "^1.0.2-exodus.0",
     "@exodus/walletconnect-time": "^1.0.2-exodus.0",
     "tslib": "1.14.1",
     "tweetnacl": "^1.0.3",

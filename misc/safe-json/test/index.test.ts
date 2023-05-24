@@ -9,7 +9,7 @@ const invalid = "{something:true}";
 const str = "hello world";
 const missing = { something: true, missing: undefined };
 
-describe("@walletconnect/safe-json", () => {
+describe("@exodus/walletconnect-safe-json", () => {
   describe("safeJsonParse", () => {
     it("should throw when value is not a string", () => {
       chai
