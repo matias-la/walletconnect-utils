@@ -1,1 +1,1 @@
-export * from "@walletconnect/jsonrpc-types";
+export * from "@exodus/walletconnect-jsonrpc-types";
