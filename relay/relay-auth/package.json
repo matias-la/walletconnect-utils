@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@walletconnect/safe-json": "^1.0.1",
-    "@walletconnect/time": "^1.0.2",
+    "@exodus/walletconnect-time": "^1.0.2-exodus.0",
     "tslib": "1.14.1",
     "tweetnacl": "^1.0.3",
     "uint8arrays": "^3.0.0"

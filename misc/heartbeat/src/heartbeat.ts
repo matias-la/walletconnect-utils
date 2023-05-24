@@ -1,5 +1,5 @@
 import { EventEmitter } from "events";
-import { toMiliseconds } from "@walletconnect/time";
+import { toMiliseconds } from "@exodus/walletconnect-time";
 
 import { IHeartBeat, HeartBeatOptions } from "./types";
 

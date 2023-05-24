@@ -2,7 +2,7 @@
 import "mocha";
 import * as chai from "chai";
 import proxyquire from "proxyquire";
-import { delay } from "@walletconnect/time";
+import { delay } from "@exodus/walletconnect-time";
 
 import BrowserStorage from "../src/browser";
 import NodeJSStorage from "../src/node-js";

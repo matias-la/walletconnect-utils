@@ -1,5 +1,5 @@
 import * as nacl from "tweetnacl";
-import { fromMiliseconds } from "@walletconnect/time";
+import { fromMiliseconds } from "@exodus/walletconnect-time";
 import {
   JWT_IRIDIUM_ALG,
   JWT_IRIDIUM_TYP,

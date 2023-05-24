@@ -3,7 +3,7 @@ import * as chai from "chai";
 
 import { Watch, delay } from "../src";
 
-describe("@walletconnect/time", () => {
+describe("@exodus/walletconnect-time", () => {
   describe("Watch", () => {
     let time: Watch;
     before(() => {
