@@ -40,7 +40,7 @@ const formatRelayUrl = async () => {
   });
 };
 
-describe("@walletconnect/jsonrpc-ws-connection", () => {
+describe("@exodus/walletconnect-jsonrpc-ws-connection", () => {
   describe("init", () => {
     it("does not initialise with an invalid `ws` string", async () => {
       chai

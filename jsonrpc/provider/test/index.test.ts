@@ -2,7 +2,7 @@ import "mocha";
 import * as chai from "chai";
 import chaiAsPromised from "chai-as-promised";
 import HttpConnection from "@walletconnect/jsonrpc-http-connection";
-import WsConnection from "@walletconnect/jsonrpc-ws-connection";
+import WsConnection from "@exodus/walletconnect-jsonrpc-ws-connection";
 import * as relayAuth from "@exodus/walletconnect-relay-auth";
 import { toString } from "uint8arrays";
 import { randomBytes } from "@stablelib/random";
