@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@walletconnect/encoding": "^1.0.2",
-    "@walletconnect/environment": "^1.0.1",
+    "@exodus/walletconnect-environment": "^1.0.1-exodus.0",
     "@walletconnect/randombytes": "^1.0.3",
     "aes-js": "^3.1.2",
     "hash.js": "^1.1.7",

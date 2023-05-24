@@ -1,1 +1,1 @@
-export * from "@walletconnect/environment";
+export * from "@exodus/walletconnect-environment";

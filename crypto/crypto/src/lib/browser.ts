@@ -1,4 +1,4 @@
-import * as env from "@walletconnect/environment";
+import * as env from "@exodus/walletconnect-environment";
 import {
   ENCRYPT_OP,
   DECRYPT_OP,
