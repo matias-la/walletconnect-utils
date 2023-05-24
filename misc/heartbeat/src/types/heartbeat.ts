@@ -1,4 +1,4 @@
-import { IEvents } from "@walletconnect/events";
+import { IEvents } from "@exodus/walletconnect-events";
 
 export interface HeartBeatOptions {
   interval?: number; // in seconds

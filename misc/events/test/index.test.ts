@@ -1,7 +1,7 @@
 import "mocha";
 import * as chai from "chai";
 
-describe("@walletconnect/events", () => {
+describe("@exodus/walletconnect-events", () => {
   it("needs tests", () => {
     // needs tests
   });
