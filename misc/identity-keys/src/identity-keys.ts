@@ -9,7 +9,7 @@ import {
   jwtExp,
 } from "@walletconnect/did-jwt";
 import { ICore, IStore } from "@walletconnect/types";
-import { formatMessage, generateRandomBytes32 } from "@walletconnect/utils";
+import { formatMessage, generateRandomBytes32 } from "@exodus/walletconnect-utils";
 import axios from "axios";
 import {
   IIdentityKeys,

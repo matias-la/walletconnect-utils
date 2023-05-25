@@ -6,8 +6,8 @@ import { RELAY_URL } from "./shared/values";
 import * as relayAuth from "@exodus/walletconnect-relay-auth";
 import { toString } from "uint8arrays";
 import { randomBytes } from "@stablelib/random";
-import { formatRelayRpcUrl } from "@walletconnect/utils";
-import { version } from "@walletconnect/utils/package.json";
+import { formatRelayRpcUrl } from "@exodus/walletconnect-utils";
+import { version } from "@exodus/walletconnect-utils/package.json";
 import { fromString } from "uint8arrays/from-string";
 
 chai.use(chaiAsPromised);

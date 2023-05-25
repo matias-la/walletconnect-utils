@@ -6,8 +6,8 @@ import WsConnection from "@exodus/walletconnect-jsonrpc-ws-connection";
 import * as relayAuth from "@exodus/walletconnect-relay-auth";
 import { toString } from "uint8arrays";
 import { randomBytes } from "@stablelib/random";
-import utils, { formatRelayRpcUrl } from "@walletconnect/utils";
-import { version } from "@walletconnect/utils/package.json";
+import utils, { formatRelayRpcUrl } from "@exodus/walletconnect-utils";
+import { version } from "@exodus/walletconnect-utils/package.json";
 
 import { fromString } from "uint8arrays/from-string";
 
