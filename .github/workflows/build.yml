@@ -12,6 +12,8 @@ jobs:
         with:
           node-version: 16
 
+      - name: Authenticate with private NPM package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Check node_modules cache
         id: cache-node-modules
         uses: actions/cache@v3
