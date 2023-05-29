@@ -1,6 +1,9 @@
 /* eslint-disable-next-line import/no-named-default */
-import { default as pino } from "pino";
+import { Logger, LoggerOptions } from "./utils";
 export * from "./constants";
 export * from "./utils";
-export type { Logger } from "pino";
-export { pino };
+export type { Logger } from "./utils";
+
+export function pino(LoggerOptions): Logger {
+  return console;
+}
