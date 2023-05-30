@@ -1,4 +1,4 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import AsyncStorage from "@exodus/react-native-async-storage";
 import { safeJsonParse, safeJsonStringify } from "@exodus/walletconnect-safe-json";
 
 import { parseEntry, IKeyValueStorage } from "../shared";

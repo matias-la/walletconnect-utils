@@ -18,7 +18,7 @@ const PERSISTED_NODEJS_DATABASE = `${dbDir}/walletconnect.db`;
 const { KeyValueStorage: ReactNativeStorage } = proxyquire(
   "../src/react-native",
   {
-    "@react-native-async-storage/async-storage": {
+    "@exodus/react-native-async-storage": {
       default: new MockAsyncStorage(),
     },
   }
